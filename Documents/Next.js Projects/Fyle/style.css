@@ -1,0 +1,143 @@
+body {
+    font-family: sans-serif;
+    margin: 2rem;
+  }
+  
+  .container {
+    position: relative;
+    top: 5rem;
+    background-color: #fff;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  input,
+  select {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    background-color:blueviolet;
+    width:31rem;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  button:hover{
+    background-color:cornflowerblue;
+  }
+
+  .modal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Stay in place when scrolling */
+    z-index: 1; /* Sit on top of other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if modal content is larger than the screen */
+    background-color: rgba(0,0,0,0.4); /* Transparent black background */
+  }
+  
+  .modal-content {
+    background-color: white;
+    position: relative;
+    left: 0.4%;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be wider depending on content */
+    height: 30%;
+  }
+  
+  .modal-content h2 {
+    
+    text-align:center;
+  }
+  #tax-amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #close-modal {
+    position: relative;
+    left: 16rem;
+    background-color:slateblue;
+    color: black;
+    top: 16px;
+    padding: 10px 20px;
+    width: 85px;
+    cursor: pointer;
+  }
+
+  .container .tooltip {
+    height: 4vh;
+    border-radius: 5px;
+    position: fixed;
+        width: 15vw;
+     color: white;
+     position: relative;
+     top: -2rem;
+     left: 25rem;
+     z-index: 1;
+     background-color: gray;
+  }
+
+  .container #question{
+    display: none;
+    position: relative;
+    left: 31rem;
+    top: 1rem;
+   
+    width: 0;
+    height: 0;
+    cursor: pointer;
+  }
+ 
+
+ .container #error {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 50%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    transform: translateY(-50%);
+    right: 5px; /* Adjust positioning as needed */
+    color: red;
+    font-size: 12px;
+  }
+  
+  #age #error:hover {
+    background-color: rgba(255, 0, 0, 0.2); /* Light red background on hover */
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  

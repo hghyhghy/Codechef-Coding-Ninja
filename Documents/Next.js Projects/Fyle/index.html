@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Tax Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-YWznkfwXO8FsqgjLbt4kBJKxAByqh2wdyqAr2Q3mwKJxWFPBvQJM9TRaI9GCvaJWFuEKvAIMSmXLqyWEjywLWXw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <section class="container">
+    <p>Enter gross annual income ? ❔</p>
+    <input type="number" id="income" placeholder="Enter gross annual income " required>
+    <p>Enter extra income from other sources</p>
+    <input type="number" id="extra-income" placeholder="Enter extra income from other source" required>
+    <p>Enter age group ?</p>
+    <p id="question">❔</p>
+    <div class="tooltip" id="tooltipText" style="display: none;">Please enter the age</div>
+    <select id="age" required>
+    
+      <option value="" id="error">Select Age Group</option>
+      <option value=39>  Less than 40 </option>
+      <option value=55>   Greater than 40 but less than 60  </option>
+      <option value=65>Greater than 60</option>
+    </select>
+    <p>Enter total applicable deductions</p>
+
+    <input type="number" id="deductions" placeholder="Enter total applicable deductions" required>
+
+    <button id="submit">Submit</button>
+  </section>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Your overall income will be </h2>
+      <p id="tax-amount"></p>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
