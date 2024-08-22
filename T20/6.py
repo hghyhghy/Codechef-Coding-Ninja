@@ -1,21 +1,9 @@
+# bitwise or
 
-
-# kth largest elements 
-
-def quicksort(arr):
-
-    if len(arr) <=1 :
-
-        return arr
+def bitwise_or(n1,n2):
     
-    else:
+    return n1 | n2
+a = 12
+b = 7
 
-        mid=  arr[len(arr) // 2]
-        left =[x for x in arr if x > mid]
-        middle =[ x for x in arr if x == mid ]
-        right = [x for x in arr if x<mid]
-
-        return quicksort(left) + middle + quicksort(right)
-
-arr=[5,0,10,6,9,2]
-print(quicksort(arr))
+print(bitwise_or(a,b))

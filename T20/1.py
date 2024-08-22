@@ -1,34 +1,26 @@
+# Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
-# first element to occur k times 
-
-def first_element_to_occur_k_times(arr,k):
-
-    count={}
-
-    store=[]
-
-    for num in arr:
-
-        if num  in count:
-
-            count[num] += 1
-
-        else:
-
-            count[num] = 1
-
-            store.append(num)
-
-        
-        if count[num] ==  k:
-
-            return num
+def squares_of_the_sorted_array(array):
     
+    def quick_sort(arr):
+        
+        if len(arr) <=1 :
+            
+            return arr
+        
+        else:
+            
+            mid=arr[len(arr)//2]
+            left=[x for x in arr if  x<mid]
+            middle=[x for x in arr if  x==mid]
+            right=[x for x in arr if  x>mid]
 
-    return None
+            return quick_sort(left) + middle + quick_sort(right)
 
-arr = [1, 2, 3, 2, 1, 2, 3, 1]
-k = 3
+    
+    temp_store = quick_sort(array)
 
-print(first_element_to_occur_k_times(arr,k))
+    return sorted([ num *num for num in temp_store])
 
+nums = [-4,-1,0,3,10]
+print(squares_of_the_sorted_array(nums))

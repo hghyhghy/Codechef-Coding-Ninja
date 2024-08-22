@@ -1,23 +1,29 @@
+# max consecutive ones in the single array 
 
-
-# move all zeroes to the end of the array 
-
-def move_all_zeroes_to_the_end(arr):
-
-    positions=0
-
-    for i in range(len(arr)):
-
-        if arr[i] != 0:
-
-            arr[positions] = arr[i]
-            positions += 1
-
+def max_consecutive_ones(array):
     
-    for i in range(positions,len(arr)):
+    max_count= 0
+    current_count= 0
+    
+    for num in array:
+        
+        if num ==  1:
+            
+            current_count += 1
+            
+        else:
+            
+            if current_count > max_count:
+                
+                max_count = current_count
+                
+            current_count = 0
+            
+    if current_count > max_count:
+        
+        max_count = current_count
+        
+    return max_count
 
-        arr[i] = 0
-
-    return arr
-arr = [0, 1, 0, 3, 12]
-print(move_all_zeroes_to_the_end(arr))
+nums = [1, 1, 0, 1, 1, 1]
+print(max_consecutive_ones(nums))
