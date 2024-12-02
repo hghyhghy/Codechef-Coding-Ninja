@@ -1,0 +1,13 @@
+1)mkdir project
+2)ls
+3.git init
+4.ls -a
+5.Get-ChildItem -Force
+6.ni filename.txt
+7.git status
+8.git add .
+9.git commit -m"Text files added"
+10. Add-Content -Path "subham.txt" -Value "This is an additional line."
+11.type subham.txt
+12. git log
+13.git remote set-url origin https://github.com/hghyhghy/MySql.git

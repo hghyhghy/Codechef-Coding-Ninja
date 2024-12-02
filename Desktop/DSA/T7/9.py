@@ -1,4 +1,4 @@
-# Find the repeating and missing numbers
+/# Find the repeating and missing numbers
 
 def repeating_missing_number(array):
     
